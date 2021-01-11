@@ -129,5 +129,7 @@ exports.csvToJson = (req, res) => {
 			});
 		});
 	});
+	return res.status(200).send(JSON.stringify(raiz));
+	// tambien pense en devolver un objeto Javascript
 	return res.status(200).send(raiz);
 };
