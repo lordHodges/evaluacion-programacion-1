@@ -43,7 +43,11 @@ exports.obtenerNodosByParam = async (req, res) => {
 
 	nodos.forEach((nodo) => {
 		if (nodo.hijos.length == cantidad) {
-			nodosByparams.push(nodo);
+			nodosByparams.push({
+				nombre: nodo.nombre,
+				tipo: nodo.tipo,
+				hijos: nodo.hijos.length,
+			});
 		}
 	});
 	return res
